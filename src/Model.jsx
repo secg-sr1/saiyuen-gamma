@@ -150,7 +150,15 @@ export default function Model() {
     setShowAccordion(false)
   }
 
-
+  const handleShareInstagram =  () => {
+    const shareText = `${window.location.href}`;
+    navigator.clipboard.writeText(shareText).then(() => {
+      alert('Link copied. You can share Saiyen Experience');
+    }).catch((error) => {
+      console.error('Error copying text:', error);
+      alert('Could not copy text, please try again');
+    })
+  }
 
   const theme = createTheme({
     breakpoints: {
@@ -341,16 +349,13 @@ export default function Model() {
                     subheader=""
                   />
                     <CardMedia 
-                        component="iframe"
-                        src="/saiyuen-gamma/bridge-03-vid-00.mp4 "
-                        autoplay
-                        loop 
-                        controls={false}
+                        component="video"
+                        src="/saiyuen-gamma/bridge-03-vid-00.mp4"
+                        // autoPlay
+                        loop
                         muted
-                        title="YouTube video"
-                        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        // allowFullScreen
-                        sx={{ height: 220, borderColor:'#000000' }}
+                        controls={true}
+                        title="video"
                         
                       
                       />
@@ -360,10 +365,12 @@ export default function Model() {
                         {/* <IconButton>
                           <FavoriteIcon />
                         </IconButton> */}
-  
+
+                      <Tooltip title="Share Saiyuen" placement='left'>
                         <IconButton aria-label="share">
-                            <ShareIcon sx={{color:'#FFFFFF'}} />
+                            <ShareIcon sx={{color:'#FFFFFF'}} onClick={handleShareInstagram} />
                         </IconButton>
+                      </Tooltip>
   
                         {/* <ExpandMore
                           expand={expanded}
