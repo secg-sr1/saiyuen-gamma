@@ -321,8 +321,8 @@ export default function Model() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <FormControlLabel control={<Checkbox defaultChecked sx={{color:'#FFFFFF'}} /> } onChange={handleCheckboxChangeBase} label="Base" sx={{fontFamily:'Montserrat, Arial, sans-serif', fontWeight:300}} />
-                <FormControlLabel control={<Checkbox defaultChecked sx={{color:'#FFFFFF'}} />} onChange={handleCheckboxChangeStructure} label="Structure" sx={{fontFamily:'Montserrat, Arial, sans-serif', fontWeight:300}} />
+                <FormControlLabel control={<Checkbox defaultChecked sx={{ color: '#FFFFFF', '&.Mui-checked': { color: '#FFFFFF',},}} /> } onChange={handleCheckboxChangeBase} label="Base" sx={{fontFamily:'Montserrat, Arial, sans-serif', fontWeight:300}} />
+                <FormControlLabel control={<Checkbox defaultChecked sx={{ color: '#FFFFFF', '&.Mui-checked': { color: '#FFFFFF',},}} /> } onChange={handleCheckboxChangeStructure} label="Structure" sx={{fontFamily:'Montserrat, Arial, sans-serif', fontWeight:300}} />
                 {/* <Typography>Click the floor of the bridge</Typography> */}
               </AccordionDetails>
             </Accordion>
