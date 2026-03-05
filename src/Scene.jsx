@@ -100,8 +100,11 @@ export default function Scene() {
   const [ showCard, setShowCard ] = useState(false);
   const [expanded, setExpanded ] = useState(false);
 
-  const gltf = useLoader(GLTFLoader, 'https://cdn.glitch.global/610da9c5-d3d9-48be-83b9-3836bdc195cb/bridge-03-base-01.glb?v=1730423872489');
-  const gltfBridge = useLoader(GLTFLoader, 'https://cdn.glitch.global/610da9c5-d3d9-48be-83b9-3836bdc195cb/bridge-03-structure-01.glb?v=1730424547179');
+  // const gltf = useLoader(GLTFLoader, 'https://cdn.glitch.global/610da9c5-d3d9-48be-83b9-3836bdc195cb/bridge-03-base-01.glb?v=1730423872489');
+  // const gltfBridge = useLoader(GLTFLoader, 'https://cdn.glitch.global/610da9c5-d3d9-48be-83b9-3836bdc195cb/bridge-03-structure-01.glb?v=1730424547179');
+  
+  const gltf = useLoader(GLTFLoader, 'https://github.com/secg-sr1/sai-models/raw/refs/heads/main/bridge-03-base-01.glb');
+  const gltfBridge = useLoader(GLTFLoader, 'https://github.com/secg-sr1/sai-models/raw/refs/heads/main/bridge-03-structure-01.glb');
   // const gltfHandrail = useLoader(GLTFLoader, 'https://cdn.glitch.global/610da9c5-d3d9-48be-83b9-3836bdc195cb/bidge-01-handrail.glb?v=1729900147243');
 
   
